@@ -20,15 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>
-        <main
-          className={`
+      <body
+        className={`
           ${bricolageGrotesque.variable}
           antialiased
         `}
-        >
-          {children}
-        </main>
+      >
+        {children}
       </body>
     </html>
   );
