@@ -1,8 +1,17 @@
 @import 'tailwindcss';
 
+/* === Default (Light Mode) Variables === */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --text-muted: #666666;
+  --text-heading: #0c0c0c;
+  --primary: #27b4a3;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-bricolage: 'Bricolage Grotesque', Helvetica, sans-serif;
 }
 
 @theme inline {
@@ -11,15 +20,35 @@
   --font-bricolage: var(--font-bricolage);
 }
 
+/* === Dark Mode Variables === */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #090B0F;
-    --foreground: #F3F3F3;
+    --background: #090b0f;
+    --foreground: #f3f3f3;
+    --text-muted: #a5a5a5;
+    --text-heading: #0c0c0c;
   }
 }
 
+/* === Global Styles === */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-bricolage), Helvetica, sans-serif;
+  font-family: var(--font-bricolage);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-heading {
+  color: var(--text-heading) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
 }
