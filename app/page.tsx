@@ -1,6 +1,7 @@
 import About from '@/components/about';
 import Banner from '@/components/banner';
 import Services from '@/components/services';
+import WhyChooseUs from '@/components/why-choose-us';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Banner />
         <About />
         <Services />
+        <WhyChooseUs />
       </main>
 
       <footer></footer>

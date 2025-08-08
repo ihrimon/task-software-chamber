@@ -52,3 +52,7 @@ body {
 .bg-primary {
   background-color: var(--primary) !important;
 }
+
+button {
+  cursor: pointer;
+}
