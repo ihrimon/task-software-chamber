@@ -4,6 +4,7 @@ import Contact from '@/components/contact';
 import FAQSection from '@/components/faq';
 import Footer from '@/components/footer';
 import Services from '@/components/services';
+import Testimonial from '@/components/testimonial';
 import WhyChooseUs from '@/components/why-choose-us';
 
 export default function Home() {
@@ -15,9 +16,10 @@ export default function Home() {
         <Services />
         <WhyChooseUs />
         <FAQSection />
+        <Testimonial />
         <Contact />
         <Footer />
-        </main>
+      </main>
     </div>
   );
 }
