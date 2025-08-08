@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section className='bg-white flex items-center py-30'>
+    <section className='bg-white flex items-center pt-30'>
       <div className='pt-[160px] lg:max-w-8xl mx-auto'>
         <h1 className='font-medium text-heading text-7xl lg:w-[1320px] text-center mb-20'>
           At Software Chamber, <span className='text-muted'>we specialize</span>{' '}
