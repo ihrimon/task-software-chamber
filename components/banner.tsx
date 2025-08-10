@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Navbar from './navbar';
 import Badge from './shared/badge';
+import ContactButton from './shared/contact-btn';
+import BannerTheme from './banner-theme';
 
 const Banner = () => {
   return (
@@ -32,7 +34,9 @@ const Banner = () => {
             </span>
             <span>in The Cloud</span>
           </h1>
+          <ContactButton />
         </div>
+        <BannerTheme />
       </div>
     </section>
   );

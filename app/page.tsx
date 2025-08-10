@@ -8,6 +8,7 @@ import GallerySlider from '@/components/gallery-slider';
 import Services from '@/components/services';
 import Testimonial from '@/components/testimonial';
 import WhyChooseUs from '@/components/why-choose-us';
+import WorkProcess from '@/components/work-process';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Banner />
         <About />
         <Services />
+        <WorkProcess />
         <WhyChooseUs />
         <Companies />
         <GallerySlider />

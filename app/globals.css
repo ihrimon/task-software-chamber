@@ -6,13 +6,13 @@
 /* === Default (Light Mode) Variables === */
 :root {
   --text-muted: #666666;
-  --text-heading: #0c0c0c;
+  --text-heading: #0C0C0C;
 
   /* Primary gradient for buttons */
   --primary-gradient: linear-gradient(90deg, #2CCEBA, #16AD71);
 
   /* Solid primary for backgrounds/icons */
-  --primary: #2CCEBA;
+  --primary: #27B4A3;
   --primary-dark: #16AD71;
 
   --color-background: var(--background);
@@ -103,7 +103,7 @@
     /* Dark mode primary gradient */
     --primary-gradient: linear-gradient(90deg, #16AD71, #2CCEBA);
 
-    --primary: #16AD71;
+    --primary: #27B4A3;
     --primary-dark: #2CCEBA;
   }
 }

@@ -1,21 +1,25 @@
-import { CircleArrowOutUpRight } from 'lucide-react'
 import Image from 'next/image'
+import ContactButton from './shared/contact-btn';
 
 
 const Navbar = () => {
   return (
     <nav className='flex justify-between items-center'>
       <Image src={'/logo.svg'} alt='logo' width={200} height={200} />
-      <div className='flex items-center gap-2'>
-        <button className='flex items-center gap-2 bg-gray-500 rounded-full px-4 py-2 border-2'>
-          Contact Us <CircleArrowOutUpRight />
-        </button>
-        <button className='rounded-full w-10 h-10 bg-gray-800 grid place-items-center'>
+      <div className='flex items-center gap-6 '>
+        <ContactButton />
+        <button
+          className='rounded-full size-14 grid place-items-center border-2 border-gray-400'
+          style={{
+            background:
+              'linear-gradient(45deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 100%)',
+          }}
+        >
           <Image
             src={'/assets/icons/menu.svg'}
             alt='menu icon'
-            width={16}
-            height={16}
+            width={22}
+            height={22}
             className='text-black'
           />
         </button>
