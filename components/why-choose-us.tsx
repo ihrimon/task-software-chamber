@@ -1,90 +1,120 @@
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MoveUpRight } from 'lucide-react';
 import Image from 'next/image';
 
 const features = [
   {
     id: 'efficiency',
     title: 'Efficiency',
-    description:
-      'Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.',
+    description: (
+      <>
+        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
+        <br /> secure e-commerce solutions <br /> tailored to business needs.
+      </>
+    ),
     icon: '/assets/icons/choose-1.svg',
   },
   {
     id: 'scalability',
     title: 'Scalability',
-    description:
-      'Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.',
+    description: (
+      <>
+        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
+        <br /> secure e-commerce solutions <br /> tailored to business needs.
+      </>
+    ),
     icon: '/assets/icons/choose-2.svg',
   },
   {
     id: 'adaptability',
     title: 'Adaptability',
-    description:
-      'Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.',
+    description: (
+      <>
+        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
+        <br /> secure e-commerce solutions <br /> tailored to business needs.
+      </>
+    ),
     icon: '/assets/icons/choose-3.svg',
   },
   {
     id: 'precision',
     title: 'Precision',
-    description:
-      'Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.',
+    description: (
+      <>
+        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
+        <br /> secure e-commerce solutions <br /> tailored to business needs.
+      </>
+    ),
     icon: '/assets/icons/choose-4.svg',
   },
 ];
 
 const WhyChooseUs = () => {
   return (
-    <section className='bg-white py-16 px-4 text-heading relative'>
+    <section className='bg-white py-24 px-4 text-gray-800 relative'>
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
-        <div className='text-center mb-12'>
-          <h2 className='text-4xl md:text-5xl font-bold text-hero-text mb-6'>
+        <div className='text-center mb-16'>
+          <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
             Why Choose
             <br />
             Softwarechamber
           </h2>
-          <p className='text-lg text-subtitle-text max-w-2xl mx-auto mb-8'>
+          <p className='text-lg text-gray-600 max-w-2xl mx-auto mb-10'>
             Deliver personalized experiences to your customers with AI-powered
             recommendation engines and dynamic content generation.
           </p>
           <button
-            className='px-5 py-1 rounded-full font-medium transition-all duration-300 hover:scale-105 flex items-center justify-between gap-2 text-white mx-auto'
+            className='px-6 py-2 rounded-full font-medium flex items-center justify-between gap-2 text-white mx-auto'
             style={{
-              background: 'linear-gradient(90deg, #16AD71, #2CCEBA)',
+              background: 'linear-gradient(90deg, #44E0CA, #12B28B)', // reversed gradient
             }}
           >
             Let&apos;s Discuss
             <span className='bg-white size-10 rounded-full grid place-items-center'>
-              <ArrowRight className='h-4 w-4 text-heading' />
+              <MoveUpRight className='h-5 w-5 text-gray-800' />
             </span>
           </button>
         </div>
 
         {/* Wrapper for arrows and cards */}
-        <div className='relative flex items-center'>
+        <div className='relative flex items-center justify-center'>
           {/* Left Arrow */}
-          <div className='absolute -left-6 lg:-left-16 z-10'>
-            <button className='w-12 h-12 rounded-full bg-background border-2 border-border hover:bg-muted transition-colors grid place-items-center'>
-              <ChevronLeft className='h-5 w-5 text-white' />
+          <div className='absolute z-50 left-0 -translate-x-1/2'>
+            <button className='size-12 rounded-full bg-foreground hover:bg-primary transition-colors grid place-items-center shadow-lg'>
+              <ChevronLeft className='size-6 text-white' />
             </button>
           </div>
 
           {/* Feature Cards Grid */}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 flex-1'>
-            {features.map(({ id, title, description, icon }) => (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {features.map(({ id, title, description, icon }, idx) => (
               <div
                 key={id}
-                className='bg-gray-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1'
+                className={`
+                  bg-gray-100 rounded-2xl p-6 transition-colors duration-300 
+                  hover:bg-primary hover:text-white hover:border hover:border-primary 
+                  group cursor-pointer transform-gpu
+                  ${idx % 2 === 0 ? 'lg:-translate-y-8' : ''}
+                `}
+                style={{
+                  transition: 'background-color 0.3s, border-color 0.3s',
+                }} // no scale
               >
-                <div className='flex items-center justify-between border-b border-gray-200 gap-4 pb-3'>
-                  <h3 className='text-2xl font-semibold text-hero-text'>
+                <div className='flex items-center justify-between border-b border-gray-200 group-hover:border-white gap-4 pb-4 mb-4'>
+                  <h3 className='text-2xl font-semibold text-gray-800 group-hover:text-white'>
                     {title}
                   </h3>
-                  <div className='bg-primary rounded-full p-3'>
-                    <Image src={icon} alt='icon' height={20} width={20} />
+                  <div className='size-12 bg-primary rounded-full grid place-items-center group-hover:bg-white group-hover:border transition-colors duration-300'>
+                    <Image
+                      src={icon}
+                      alt='icon'
+                      height={20}
+                      width={20}
+                      className='transition-all duration-300 group-hover:invert'
+                    />
                   </div>
                 </div>
-                <p className='text-subtitle-text text-sm leading-relaxed mt-5'>
+                <p className='text-gray-500 group-hover:text-white leading-relaxed'>
                   {description}
                 </p>
               </div>
@@ -92,9 +122,9 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Right Arrow */}
-          <div className='absolute -right-6 lg:-right-16 z-10'>
-            <button className='w-12 h-12 rounded-full bg-background border-2 border-border hover:bg-muted transition-colors grid place-items-center'>
-              <ChevronRight className='h-5 w-5 text-white' />
+          <div className='absolute z-50 right-0 translate-x-1/2'>
+            <button className='size-12 rounded-full bg-foreground hover:bg-primary transition-colors grid place-items-center shadow-lg'>
+              <ChevronRight className='size-6 text-white' />
             </button>
           </div>
         </div>
