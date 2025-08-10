@@ -1,4 +1,5 @@
 import { stats } from '@/constants';
+import { ArrowMoveUp, MultiStar } from '@/lib';
 import { Users, TrendingUp, Calendar, MessageSquare } from 'lucide-react';
 import Image from 'next/image';
 
@@ -6,10 +7,8 @@ const About = () => {
   return (
     <section className='bg-white flex items-center pt-20 px-4 lg:px-8'>
       <div className='max-w-7xl mx-auto w-full'>
-        <h1 className='inline-block font-medium text-heading text-3xl sm:text-5xl lg:text-7xl text-center mb-12 sm:mb-16 lg:mb-20 leading-tight'>
-          <Image
-            src='/assets/icons/multi-star.svg'
-            alt='multi star'
+        <h1 className='inline-block font-medium text-heading text-4xl md:text-5xl text-center mb-12 sm:mb-16 lg:mb-20 leading-tight'>
+          <MultiStar
             width={40}
             height={40}
             className='inline-block mr-2 sm:mr-3 align-middle'
@@ -17,9 +16,7 @@ const About = () => {
           At Software Chamber, <span className='text-muted'>we specialize</span>{' '}
           in turning complex challenges into elegant{' '}
           <span className='text-muted'>digital solutions</span>
-          <Image
-            src='/assets/icons/arrow-up.svg'
-            alt='arrow up'
+          <ArrowMoveUp
             width={50}
             height={50}
             className='inline-block ml-2 sm:ml-3 align-middle'

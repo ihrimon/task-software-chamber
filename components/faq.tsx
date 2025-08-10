@@ -4,7 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Button } from '@/components/ui/button';
+import { ArrowMoveUp, MultiStar } from '@/lib';
+import { MoveRight } from 'lucide-react';
 
 const faqData = [
   {
@@ -36,44 +37,65 @@ const faqData = [
 const FAQSection = () => {
   return (
     <section className='py-16 px-4 bg-background'>
-      <div className='max-w-4xl mx-auto'>
+      <div className='max-w-5xl mx-auto'>
         {/* Header */}
         <div className='text-center mb-12'>
-          <h2 className='text-4xl md:text-5xl font-bold text-hero-text mb-6 leading-tight'>
+          <h2 className='text-4xl md:text-5xl font-medium text-hero-text mb-6 leading-tight'>
             Comprehensive Answers to the Most
             <br />
-            <span className='text-primary'>✦ Common Questions</span>{' '}
-            <span className='text-muted-foreground'>About Our</span>
-            <br />
-            <span className='text-muted-foreground'>Services</span> and How We{' '}
-            <span className='text-muted-foreground'>Work</span>{' '}
-            <span className='text-2xl'>⌄</span>
+            <span className='text-primary'>
+              <MultiStar
+                width={40}
+                height={40}
+                className='inline-block align-middle'
+              />{' '}
+              Common Questions
+            </span>{' '}
+            <span className='text-muted'>
+              About Our <br /> Services{' '}
+            </span>
+            and How We <span className='text-muted'>Work</span>{' '}
+            <ArrowMoveUp
+              width={40}
+              height={40}
+              className='inline-block align-middle'
+            />
           </h2>
         </div>
 
         {/* FAQ Header */}
         <div className='flex items-center justify-between mb-8'>
-          <h3 className='text-4xl font-bold text-hero-text'>FAQ</h3>
-          <Button
-            variant='outline'
-            className='bg-primary text-primary-foreground hover:bg-primary/90 border-primary rounded-full px-6 py-2'
-          >
-            All FAQ →
-          </Button>
+          <h3 className='text-4xl md:text-6xl font-bold text-hero-text'>FAQ</h3>
+          <button className='flex items-center gap-3 font-medium group transition-colors duration-300 hover:text-primary'>
+            All FAQ
+            <span
+              className='bg-primary size-10 grid place-items-center rounded-full 
+               transition-all duration-300 group-hover:bg-primary group-hover:text-white'
+            >
+              <MoveRight className='transition-transform duration-300' />
+            </span>
+          </button>
         </div>
+        <div
+          className='border-t border-transparent'
+          style={{
+            borderImage:
+              'repeating-linear-gradient(to right, #e5e7eb, #e5e7eb 8px, transparent 8px, transparent 14px) 1',
+          }}
+        ></div>
 
         {/* FAQ Accordion */}
-        <Accordion type='single' collapsible className='space-y-4'>
+        <Accordion type='single' collapsible className='space-y-4 mt-6'>
           {faqData.map((faq) => (
             <AccordionItem
               key={faq.id}
               value={faq.id}
-              className='bg-feature-card rounded-xl border-0 px-6 py-2'
+              className='bg-feature-card border-b border-gray-200 last:border-b-0 py-2'
             >
-              <AccordionTrigger className='text-left text-lg font-medium text-hero-text hover:no-underline py-6'>
+              <AccordionTrigger className='text-left md:text-lg font-medium text-hero-text hover:underline py-6'>
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className='text-subtitle-text leading-relaxed pb-6'>
+              <AccordionContent className='text-subtitle-text leading-relaxed text-muted-foreground pb-6 pr-6 md:w-4xl'>
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
