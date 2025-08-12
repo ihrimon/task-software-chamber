@@ -19,7 +19,7 @@ const Banner = () => {
         <div className='text-center mt-20 space-y-10 flex flex-col items-center justify-center'>
           <Badge text='Smarter Idea, instant solutions' />
 
-          <h1 className='font-medium text-8xl text-transparent bg-gradient-to-b from-[#00FFE0] to-[#FFFFFF] bg-clip-text flex flex-col items-center justify-center leading-tight'>
+          <h1 className='font-medium text-8xl text-transparent bg-gradient-to-b from-primary to-white bg-clip-text flex flex-col items-center justify-center leading-tight'>
             <span>We are your Software</span>
             <span className='flex items-end gap-4'>
               Development

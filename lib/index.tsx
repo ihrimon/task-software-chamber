@@ -29,3 +29,16 @@ export const ArrowMoveUp = ({ width, height, className = '' }: WidthHeight) => {
     />
   );
 };
+
+export const GlobeImage = ({ width, height, className = '' }: WidthHeight) => {
+  return (
+    <Image
+      src={'/assets/images/globe.png'}
+      alt='Globe'
+      width={width}
+      height={height}
+      className={className}
+    />
+  );
+};
+
