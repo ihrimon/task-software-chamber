@@ -75,12 +75,12 @@ const GallerySlider = () => {
   );
 
   return (
-    <section className='bg-black py-16'>
+    <section className='bg-foreground py-24'>
       <div className='max-w-7xl mx-auto px-4 text-center'>
         <Badge text='Smarter Idea, instant solutions' />
 
         {/* Top Row */}
-        <div ref={sliderTopRef} className='keen-slider mt-10'>
+        <div ref={sliderTopRef} className='keen-slider mt-16'>
           {topItems.map((cat, idx) => (
             <div
               key={idx}

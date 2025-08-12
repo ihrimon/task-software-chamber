@@ -5,7 +5,7 @@ import ContactButton from './shared/contact-btn';
 
 const CTA = () => {
   return (
-    <div className='relative w-full max-w-5xl mx-auto text-center rounded-3xl p-[2px]'>
+    <div className='relative mt-24 w-full max-w-6xl mx-auto text-center rounded-3xl p-[2px]'>
       {/* Gradient border */}
       <div className='absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-t from-white/5 via-white/10 to-primary' />
 
@@ -29,7 +29,7 @@ const CTA = () => {
         </div>
 
         <h2 className='text-4xl md:text-5xl font-medium tracking-tight leading-tight my-10'>
-          Uncover the Design and Development Projects{' '}
+          Uncover the Design and Development <br /> Projects{' '}
           <span className='text-gray-400'>That Set Us Apart</span>
         </h2>
 
