@@ -76,6 +76,7 @@ const FAQSection = () => {
             </span>
           </button>
         </div>
+        {/* dashed border */}
         <div
           className='border-t border-transparent'
           style={{
