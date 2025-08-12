@@ -1,21 +1,8 @@
-// components/DevelopmentProcessModified.js
-import React from 'react';
+// components/DevelopmentProcess.js
+'use client'; // This directive is crucial for client-side components.
 
-// Assuming Globe is an SVG or icon component.
-// You need to import your own Globe component here.
-// For this example, we'll assume it's available.
-const Globe = ({ className }) => (
-  <div className={className}>
-    {/* Replace with your Globe SVG or component */}
-    <span
-      role='img'
-      aria-label='globe'
-      className='text-8xl text-blue-500 animate-spin-slow'
-    >
-      🌐
-    </span>
-  </div>
-);
+import React from 'react';
+import { Globe } from './globe';
 
 const processSteps = [
   { step: 1, name: 'Code', position: 'bottom-20 left-10' },
@@ -29,13 +16,13 @@ const processSteps = [
 
 const DevelopmentProcess = () => {
   return (
-    <div className='relative w-full max-w-4xl h-[40rem] flex items-center justify-center'>
+    <div className='relative w-full max-w-4xl h-[50rem] flex items-center justify-center mt-40'>
       {/* Dashed Half-Circle Border */}
       <div className='absolute w-[50rem] h-[50rem] border-[3px] border-dashed border-slate-500 rounded-full clip-half' />
 
       {/* Center Globe Component */}
       <div className='relative'>
-        <Globe className='z-10' />
+        <Globe />
         <div className='absolute inset-0 bg-primary/10 rounded-full pointer-events-none' />
       </div>
 

@@ -58,19 +58,8 @@ export default function WorkProcess() {
 
       <ContactButton />
 
-      {/* Main Process Section */}
-      <div className='relative w-full max-w-4xl h-[40rem] flex items-center justify-center'>
-        <div className='absolute w-[50rem] h-[50rem] border-[3px] border-dashed border-slate-500 rounded-full clip-half' />
-
-        <div className='relative'>
-          <Globe className='z-10' />
-          <div className='absolute inset-0 bg-primary/10 rounded-full pointer-events-none' />
-        </div>
-
-        {/* Steps */}
         
       <DevelopmentProcess />
-      </div>
 
       {/* Custom Keyframes */}
       <style jsx global>{`

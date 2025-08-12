@@ -9,7 +9,7 @@ const ContactButton = () => {
           'linear-gradient(45deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 100%)',
       }}
     >
-      <span className='text-white font-medium text-xl'>Contact Us</span>
+      <span className='text-white font-medium text-xl ml-2'>Contact Us</span>
       <div className='size-10 rounded-full bg-white grid place-items-center'>
         <Image
           src='/assets/icons/contact.svg'
