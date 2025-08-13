@@ -18,41 +18,30 @@ const categories = [
   { title: 'Auto Motive', image: '/assets/images/service-9.png' },
 ];
 
-// Autoplay helper
-function autoplayPlugin(direction = 1, delay = 2000) {
+// Smooth continuous autoplay plugin
+function continuousAutoplay(speed = 0.02) {
   return (slider: any) => {
-    let timeout: any;
+    let raf: number;
     let mouseOver = false;
 
-    function clearNextTimeout() {
-      clearTimeout(timeout);
-    }
-    function nextTimeout() {
-      clearTimeout(timeout);
-      if (mouseOver) return;
-      timeout = setTimeout(() => {
-        direction === 1 ? slider.next() : slider.prev();
-      }, delay);
+    function update() {
+      if (!mouseOver) {
+        slider.current?.moveToIdx(slider.track.details.abs + speed, true);
+      }
+      raf = requestAnimationFrame(update);
     }
 
     slider.on('created', () => {
-      slider.container.addEventListener('mouseover', () => {
-        mouseOver = true;
-        clearNextTimeout();
-      });
-      slider.container.addEventListener('mouseout', () => {
-        mouseOver = false;
-        nextTimeout();
-      });
-      nextTimeout();
+      raf = requestAnimationFrame(update);
+      slider.container.addEventListener('mouseover', () => (mouseOver = true));
+      slider.container.addEventListener('mouseout', () => (mouseOver = false));
     });
-    slider.on('dragStarted', clearNextTimeout);
-    slider.on('animationEnded', nextTimeout);
-    slider.on('updated', nextTimeout);
+
+    slider.on('destroyed', () => cancelAnimationFrame(raf));
   };
 }
 
-const GallerySlider = () => {
+export default function GallerySlider() {
   const topItems = categories.slice(0, 5);
   const bottomItems = categories.slice(5);
 
@@ -60,18 +49,37 @@ const GallerySlider = () => {
     {
       loop: true,
       renderMode: 'performance',
+      drag: false,
       slides: { perView: 5, spacing: 20 },
+      breakpoints: {
+        '(max-width: 768px)': {
+          slides: { perView: 2.5, spacing: 10 },
+        },
+        '(max-width: 480px)': {
+          slides: { perView: 1.8, spacing: 8 },
+        },
+      },
     },
-    [autoplayPlugin(-1, 200)] // Right-to-left
+    [continuousAutoplay(0.02)] // smaller speed = smoother
   );
 
   const [sliderBottomRef] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,
       renderMode: 'performance',
+      drag: false,
+      rtl: true, // Opposite direction
       slides: { perView: 4, spacing: 20 },
+      breakpoints: {
+        '(max-width: 768px)': {
+          slides: { perView: 2.5, spacing: 10 },
+        },
+        '(max-width: 480px)': {
+          slides: { perView: 1.8, spacing: 8 },
+        },
+      },
     },
-    [autoplayPlugin(1, 200)] // Left-to-right
+    [continuousAutoplay(0.02)]
   );
 
   return (
@@ -121,6 +129,4 @@ const GallerySlider = () => {
       </div>
     </section>
   );
-};
-
-export default GallerySlider;
+}

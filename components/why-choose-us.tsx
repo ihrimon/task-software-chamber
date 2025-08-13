@@ -63,23 +63,12 @@ const WhyChooseUs = () => {
             Deliver personalized experiences to your customers with AI-powered
             recommendation engines and dynamic content generation.
           </p>
-          <button
-            className='px-6 py-2 rounded-full font-medium flex items-center justify-between gap-4 text-white mx-auto'
-            style={{
-              background: 'linear-gradient(90deg, #44E0CA, #12B28B)', // reversed gradient
-            }}
-          >
-            Let&apos;s Discuss
-            <span className='bg-white size-10 rounded-full grid place-items-center'>
-              <MoveUpRight className='h-5 w-5 text-gray-800' />
-            </span>
-          </button>
         </div>
 
         {/* Wrapper for arrows and cards */}
         <div className='relative flex items-center justify-center'>
           {/* Left Arrow */}
-          <div className='absolute z-50 left-0 -translate-x-1/2'>
+          <div className='absolute z-50 left-0 -translate-x-1/2 hidden md:flex'>
             <button className='size-12 rounded-full bg-foreground hover:bg-primary transition-colors grid place-items-center shadow-lg'>
               <ChevronLeft className='size-6 text-white' />
             </button>
@@ -121,7 +110,7 @@ const WhyChooseUs = () => {
             ))}
           </div>
 
-          <div className='absolute z-50 right-0 translate-x-1/2'>
+          <div className='absolute z-50 right-0 translate-x-1/2 hidden md:flex'>
             <button className='size-12 rounded-full bg-foreground hover:bg-primary transition-colors grid place-items-center'>
               <ChevronRight className='size-6 text-white' />
             </button>

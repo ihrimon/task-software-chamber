@@ -46,8 +46,8 @@ export default function Companies() {
               className={`
     relative p-4 rounded-full bg-gradient-to-b from-primary to-foreground/20
     transition-transform duration-300 hover:scale-105
-    ${index === 0 ? 'translate-x-20' : ''}
-    ${index === companies.length - 1 ? 'translate-x-24' : ''}
+    ${index === 0 ? 'lg:translate-x-20' : ''}
+    ${index === companies.length - 1 ? 'lg:translate-x-24' : ''}
   `}
             >
               <div className='flex items-center space-x-4'>
