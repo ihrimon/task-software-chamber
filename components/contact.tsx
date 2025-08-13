@@ -12,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronRight, MoveUpRight } from 'lucide-react';
 import Image from 'next/image';
 
 interface ContactFormData {
@@ -45,56 +45,49 @@ const Contact = () => {
   };
 
   return (
-    <section className='py-20 bg-background'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mx-auto mb-20'>
-          <h2 className='text-4xl lg:text-5xl font-bold text-foreground leading-tight'>
-            Let&apos;s talk about your next <br />
+    <section className='py-24 bg-white'>
+      <div className='max-w-7xl mx-auto'>
+        <div className='text-center mb-10'>
+          <h2 className='text-4xl lg:text-5xl font-semibold leading-tight px-10 lg:px-0'>
+            Let&apos;s talk about your next <br className='hidden lg:block' />
             project.{' '}
             <span className='text-muted-foreground'>
               We&apos;re here to help.
             </span>
           </h2>
-          <p className='text-muted-foreground text-lg leading-relaxed max-w-md mx-auto'>
+          <p className='text-gray-500 mx-auto leading-relaxed max-w-md mt-8 text-center lg:text-lg text-sm px-4 lg:px-0'>
             Deliver personalized experiences to your customers with AI-powered
-            recommendation engines and dynamic content generation.
+            recommendation engines and <br /> dynamic content generation.
           </p>
         </div>
-        <div className='grid lg:grid-cols-2 gap-6 items-center'>
-          {/* Left side - Image and content */}
-          <div className='space-y-8'>
-            {/* Contact Image */}
-            <div className='relative'>
-              <div className='w-full max-w-md h-96 bg-muted rounded-2xl overflow-hidden'>
-                <Image
-                  src='/assets/images/contact.png'
-                  alt='Contact'
-                  className='w-full h-full object-cover'
-                  height={730}
-                  width={770}
-                />
-              </div>
-            </div>
+        <div className='grid lg:grid-cols-2 items-center'>
+          <div className='rounded-2xl lg:w-140 lg:pl-10 px-8'>
+            <Image
+              src='/assets/images/contact.png'
+              alt='Contact'
+              className='object-cover'
+              height={500}
+              width={630}
+            />
           </div>
 
-          {/* Right side - Contact form */}
           <div className='p-8 rounded-2xl '>
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
               {/* First and Last Name Row */}
-                <div className='space-y-6'>
-                  <Input
-                    id='firstName'
-                    placeholder='First Name'
-                    {...register('firstName', {
-                      required: 'First name is required',
-                    })}
-                    className='bg-muted/50 border-0'
-                  />
-                  {errors.firstName && (
-                    <p className='text-sm text-destructive'>
-                      {errors.firstName.message}
-                    </p>
-                  )}
+              <div className='space-y-6'>
+                <Input
+                  id='firstName'
+                  placeholder='First Name'
+                  {...register('firstName', {
+                    required: 'First name is required',
+                  })}
+                  className='bg-muted/50 border-0'
+                />
+                {errors.firstName && (
+                  <p className='text-sm text-destructive'>
+                    {errors.firstName.message}
+                  </p>
+                )}
                 <div className='space-y-2'>
                   <Input
                     id='lastName'
@@ -193,15 +186,18 @@ const Contact = () => {
                 )}
               </div>
 
-              {/* Submit Button */}
-              <Button
-                type='submit'
+              <button
+                className='px-4 py-2 rounded-full font-medium flex items-center justify-between gap-4 text-white w-40'
+                style={{
+                  background: 'linear-gradient(90deg, #44E0CA, #12B28B)',
+                }}
                 disabled={isSubmitting}
-                className='w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg flex items-center justify-center gap-2 transition-all'
               >
                 {isSubmitting ? 'Submitting...' : 'Submit'}
-                <ArrowRight className='w-4 h-4' />
-              </Button>
+                <div className='size-10 bg-white rounded-full grid place-items-center'>
+                  <MoveUpRight className='size-6 text-foreground ' />
+                </div>
+              </button>
             </form>
           </div>
         </div>

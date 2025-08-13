@@ -64,7 +64,7 @@ const WhyChooseUs = () => {
             recommendation engines and dynamic content generation.
           </p>
           <button
-            className='px-6 py-2 rounded-full font-medium flex items-center justify-between gap-2 text-white mx-auto'
+            className='px-6 py-2 rounded-full font-medium flex items-center justify-between gap-4 text-white mx-auto'
             style={{
               background: 'linear-gradient(90deg, #44E0CA, #12B28B)', // reversed gradient
             }}
@@ -121,9 +121,8 @@ const WhyChooseUs = () => {
             ))}
           </div>
 
-          {/* Right Arrow */}
           <div className='absolute z-50 right-0 translate-x-1/2'>
-            <button className='size-12 rounded-full bg-foreground hover:bg-primary transition-colors grid place-items-center shadow-lg'>
+            <button className='size-12 rounded-full bg-foreground hover:bg-primary transition-colors grid place-items-center'>
               <ChevronRight className='size-6 text-white' />
             </button>
           </div>

@@ -23,7 +23,7 @@ export default function Footer() {
       <div className='max-w-7xl mx-auto'>
         <h2 className='text-5xl font-bold mb-10'>LET’S TALK</h2>
 
-        <div className=' grid grid-cols-1 lg:grid-cols-3 space-x-7'>
+        <div className=' grid grid-cols-1 lg:grid-cols-3 lg:space-x-7 space-y-8'>
           {/* Left Section */}
           <div>
             <p className='text-gray-400 max-w-md mb-8'>
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
 
           {/* Right Section */}
-          <div className='flex justify-center lg:justify-end'>
+          <div className='flex justify-start lg:justify-end '>
             <div className='flex-shrink-0'>
               <Image
                 src='/assets/images/footer.png'
