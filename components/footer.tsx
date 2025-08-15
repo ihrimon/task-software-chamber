@@ -1,16 +1,8 @@
+import { socialLinks } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
-  const socialLinks = [
-    { name: 'Instagram', href: '#' },
-    { name: 'Twitter', href: '#' },
-    { name: 'Tiktok', href: '#' },
-    { name: 'Facebook', href: '#' },
-    { name: 'Linkedin', href: '#' },
-    { name: 'Youtube', href: '#' },
-  ];
-
   return (
     <footer
       className='py-20 px-6 bg-foreground text-white'

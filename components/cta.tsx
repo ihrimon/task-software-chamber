@@ -15,7 +15,6 @@ const CTA = () => {
         style={{
           backgroundImage: "url('/assets/images/cta.png')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
         }}
       >
         <Badge text='Smarter idea, instant solutions' />

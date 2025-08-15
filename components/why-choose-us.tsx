@@ -1,52 +1,6 @@
-import { ChevronLeft, ChevronRight, MoveUpRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
-const features = [
-  {
-    id: 'efficiency',
-    title: 'Efficiency',
-    description: (
-      <>
-        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
-        <br /> secure e-commerce solutions <br /> tailored to business needs.
-      </>
-    ),
-    icon: '/assets/icons/choose-1.svg',
-  },
-  {
-    id: 'scalability',
-    title: 'Scalability',
-    description: (
-      <>
-        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
-        <br /> secure e-commerce solutions <br /> tailored to business needs.
-      </>
-    ),
-    icon: '/assets/icons/choose-2.svg',
-  },
-  {
-    id: 'adaptability',
-    title: 'Adaptability',
-    description: (
-      <>
-        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
-        <br /> secure e-commerce solutions <br /> tailored to business needs.
-      </>
-    ),
-    icon: '/assets/icons/choose-3.svg',
-  },
-  {
-    id: 'precision',
-    title: 'Precision',
-    description: (
-      <>
-        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
-        <br /> secure e-commerce solutions <br /> tailored to business needs.
-      </>
-    ),
-    icon: '/assets/icons/choose-4.svg',
-  },
-];
 
 const WhyChooseUs = () => {
   return (
@@ -122,3 +76,51 @@ const WhyChooseUs = () => {
 };
 
 export default WhyChooseUs;
+
+
+const features = [
+  {
+    id: 'efficiency',
+    title: 'Efficiency',
+    description: (
+      <>
+        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
+        <br /> secure e-commerce solutions <br /> tailored to business needs.
+      </>
+    ),
+    icon: '/assets/icons/choose-1.svg',
+  },
+  {
+    id: 'scalability',
+    title: 'Scalability',
+    description: (
+      <>
+        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
+        <br /> secure e-commerce solutions <br /> tailored to business needs.
+      </>
+    ),
+    icon: '/assets/icons/choose-2.svg',
+  },
+  {
+    id: 'adaptability',
+    title: 'Adaptability',
+    description: (
+      <>
+        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
+        <br /> secure e-commerce solutions <br /> tailored to business needs.
+      </>
+    ),
+    icon: '/assets/icons/choose-3.svg',
+  },
+  {
+    id: 'precision',
+    title: 'Precision',
+    description: (
+      <>
+        Software Chamber specializes in <br /> creating powerful, scalable, and{' '}
+        <br /> secure e-commerce solutions <br /> tailored to business needs.
+      </>
+    ),
+    icon: '/assets/icons/choose-4.svg',
+  },
+];

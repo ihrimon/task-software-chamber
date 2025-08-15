@@ -1,21 +1,8 @@
 'use client';
 
+import { companies } from '@/constants';
 import CTA from './cta';
 import Image from 'next/image';
-
-const companies = [
-  {
-    name: 'Spotify',
-    icon: '/assets/icons/company-1.svg',
-  },
-  { name: 'TalentQl', icon: '/assets/icons/company-2.svg' },
-  { name: 'DropBox', icon: '/assets/icons/company-3.svg' },
-  { name: 'Fliqpqy', icon: '/assets/icons/company-4.svg' },
-  {
-    name: 'Slack',
-    icon: '/assets/icons/company-5.svg',
-  },
-];
 
 export default function Companies() {
   return (

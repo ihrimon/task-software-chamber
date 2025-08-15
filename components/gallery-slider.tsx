@@ -5,18 +5,7 @@ import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import Image from 'next/image';
 import Badge from './shared/badge';
-
-const categories = [
-  { title: 'Tech', image: '/assets/images/service-1.png' },
-  { title: 'Health Care', image: '/assets/images/service-2.png' },
-  { title: 'Developers', image: '/assets/images/service-3.png' },
-  { title: 'Software', image: '/assets/images/service-4.png' },
-  { title: 'Entertainment', image: '/assets/images/service-5.png' },
-  { title: 'Hospitality', image: '/assets/images/service-6.png' },
-  { title: 'Manufacturing', image: '/assets/images/service-7.png' },
-  { title: 'Energy', image: '/assets/images/service-8.png' },
-  { title: 'Auto Motive', image: '/assets/images/service-9.png' },
-];
+import { categories } from '@/constants';
 
 // Smooth continuous autoplay plugin
 function continuousAutoplay(speed = 0.02) {
@@ -60,7 +49,7 @@ export default function GallerySlider() {
         },
       },
     },
-    [continuousAutoplay(0.02)] // smaller speed = smoother
+    [continuousAutoplay(0.02)] 
   );
 
   const [sliderBottomRef] = useKeenSlider<HTMLDivElement>(
@@ -68,7 +57,7 @@ export default function GallerySlider() {
       loop: true,
       renderMode: 'performance',
       drag: false,
-      rtl: true, // Opposite direction
+      rtl: true, 
       slides: { perView: 4, spacing: 20 },
       breakpoints: {
         '(max-width: 768px)': {

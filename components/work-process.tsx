@@ -2,38 +2,6 @@
 import Badge from './shared/badge';
 import ContactButton from './shared/contact-btn';
 import DevelopmentProcess from './shared/dev-process';
-import DevelopmentProcessDiagram from './shared/dev-process';
-import { Globe } from './shared/globe';
-
-const processSteps = [
-  {
-    step: 1,
-    name: 'Code',
-    position: 'left-[8%] -translate-y-2 -translate-x-1/2',
-  },
-  {
-    step: 2,
-    name: 'Build',
-    position: 'left-[10%] -translate-y-10 translate-x-1',
-  },
-  { step: 3, name: 'Test', position: 'left-[25%] top-[10%] -translate-x-1/2' },
-  { step: 4, name: 'Release', position: 'left-1/2 top-[-5%] -translate-x-1/2' },
-  {
-    step: 5,
-    name: 'Deploy',
-    position: 'right-[25%] top-[10%] translate-x-1/2',
-  },
-  {
-    step: 6,
-    name: 'Monitor',
-    position: 'right-[10%] top-[30%] translate-x-1/2',
-  },
-  {
-    step: 7,
-    name: 'Maintain',
-    position: 'right-[25%] top-1/2 translate-x-1/2',
-  },
-];
 
 export default function WorkProcess() {
   return (
@@ -58,7 +26,7 @@ export default function WorkProcess() {
 
       <ContactButton />
 
-        
+      {/* Development process */}
       <DevelopmentProcess />
 
       {/* Custom Keyframes */}

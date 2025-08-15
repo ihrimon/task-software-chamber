@@ -2,20 +2,11 @@
 
 import React from 'react';
 import { Globe } from './globe';
-
-const processSteps = [
-  { step: 1, name: 'Code', position: 'bottom-20 left-10' },
-  { step: 2, name: 'Build', position: 'bottom-[40%] left-0' },
-  { step: 3, name: 'Test', position: 'top-[30%] left-[20%]' },
-  { step: 4, name: 'Release', position: 'top-[10%] left-1/2 -translate-x-1/2' },
-  { step: 5, name: 'Deploy', position: 'top-[30%] right-[20%]' },
-  { step: 6, name: 'Monitor', position: 'bottom-[40%] right-0' },
-  { step: 7, name: 'Maintain', position: 'bottom-20 right-10' },
-];
+import { processSteps } from '@/constants';
 
 const DevelopmentProcess = () => {
   return (
-    <div className='w-full mt-20'>
+    <div className='w-full mt-40'>
       {/* Desktop & Large Screens */}
       <div className='hidden md:flex relative w-full max-w-4xl h-[50rem] mx-auto items-center justify-center'>
         {/* Dashed Half-Circle Border */}

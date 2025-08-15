@@ -42,3 +42,5 @@ export const GlobeImage = ({ width, height, className = '' }: WidthHeight) => {
   );
 };
 
+
+
