@@ -61,3 +61,41 @@ export const companies = [
     icon: '/assets/icons/company-5.svg',
   },
 ];
+
+export const initialNodes = [
+  {
+    id: 'left-1',
+    type: 'sideCheckbox',
+    position: { x: 20, y: 140 },
+    data: { label: 'Website Development' },
+    draggable: false,
+  },
+  {
+    id: 'left-2',
+    type: 'sideCheckbox',
+    position: { x: 20, y: 300 },
+    data: { label: 'Mobile App Development' },
+    draggable: false,
+  },
+  {
+    id: 'center',
+    type: 'centerTimeline',
+    position: { x: 260, y: 80 },
+    data: {},
+    draggable: false,
+  },
+  {
+    id: 'right-1',
+    type: 'sideCheckbox',
+    position: { x: 1020, y: 140 },
+    data: { label: 'UI/UX Engineering' },
+    draggable: false,
+  },
+  {
+    id: 'right-2',
+    type: 'sideCheckbox',
+    position: { x: 1020, y: 300 },
+    data: { label: 'Software Services' },
+    draggable: false,
+  },
+];

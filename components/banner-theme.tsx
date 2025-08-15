@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
@@ -15,9 +16,6 @@ import ReactFlow, {
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 
-// -----------------------------
-// Helper types & styles
-// -----------------------------
 type AnyNode = Node<any>;
 
 const constEdgeStyle: React.CSSProperties = {
@@ -25,9 +23,6 @@ const constEdgeStyle: React.CSSProperties = {
   strokeWidth: 2,
 };
 
-// -----------------------------
-// Custom Node: Side checkbox node
-// -----------------------------
 const SideCheckboxNode: React.FC<any> = ({ data }) => {
   return (
     <div className='max-w-[220px] px-3 py-2 rounded-lg border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.02)] backdrop-blur-sm text-sm text-white flex items-center gap-3'>
@@ -48,9 +43,6 @@ const SideCheckboxNode: React.FC<any> = ({ data }) => {
   );
 };
 
-// -----------------------------
-// Custom Node: Center timeline node
-// -----------------------------
 const CenterTimelineNode: React.FC<any> = () => {
   return (
     <div className='w-[720px] h-[300px] rounded-2xl relative shadow-2xl bg-gradient-to-b from-[rgba(9,22,24,0.7)] to-[rgba(6,12,14,0.85)] border border-[rgba(255,255,255,0.03)] p-6 text-white overflow-hidden'>
@@ -198,17 +190,11 @@ const CenterTimelineNode: React.FC<any> = () => {
   );
 };
 
-// -----------------------------
-// Node types
-// -----------------------------
 const nodeTypes = {
   sideCheckbox: SideCheckboxNode,
   centerTimeline: CenterTimelineNode,
 };
 
-// -----------------------------
-// Initial nodes & edges
-// -----------------------------
 const initialNodes: AnyNode[] = [
   {
     id: 'left-1',
@@ -278,9 +264,6 @@ const initialEdges: Edge[] = [
   },
 ];
 
-// -----------------------------
-// Main component
-// -----------------------------
 export default function BannerTheme() {
   const [nodes, setNodes] = React.useState(initialNodes);
   const [edges, setEdges] = React.useState(initialEdges);

@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Globe } from './globe';
 import { processSteps } from '@/constants';
+import Image from 'next/image';
 
 const DevelopmentProcess = () => {
   return (
@@ -14,7 +14,12 @@ const DevelopmentProcess = () => {
 
         {/* Center Globe */}
         <div className='relative'>
-          <Globe />
+          <Image
+            src={'/assets/images/globe.png'}
+            alt='globe'
+            width={500}
+            height={500}
+          />
           <div className='absolute inset-0 bg-primary/10 rounded-full pointer-events-none' />
         </div>
 
